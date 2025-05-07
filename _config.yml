@@ -29,7 +29,7 @@ url: "https://janne.hamalainen.social" # the base hostname & protocol for your s
 github_username:  jshamalainen
 
 # Build settings
-theme: jekyll-theme-architect
+theme: minima
 plugins:
   - jekyll-feed
 
