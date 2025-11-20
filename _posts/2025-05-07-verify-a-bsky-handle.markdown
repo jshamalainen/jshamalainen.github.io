@@ -28,7 +28,10 @@ Github pages uses Jekyll on the background so you can start pushing web site con
 ## Part 2: verifying the new domain-backed handle 
 12. Go to bsky.app and select settings -> account -> handle 
 13. Click "I have my own domain" 
-14. I selected "No DNS Panel" and pushed the text file name `atproto-did` to folder `.well-known` that contained the `did:...etc...`  according to instructions on the "No DNS Panel" page. I had the `.nojekyll` file present at this point so Jekyll wouldn't refuse to serve stuff from the dot folder. Alternatively you can use a TXT record again, but since I was registering a subdomain instead of an apex domain this approach seemed to work better. 
+14. I selected "No DNS Panel" and pushed the text file name `atproto-did` to folder `.well-known` that contained the `did:...etc...`  according to instructions on the "No DNS Panel" page.
+15. I also included the .well-known folder to the _config.yml so the atproto-did file gets included
+`include: 
+  - .well-known`
 
 That's it. Updating DNS records and everything may take a moment, so if something doesn't succeed immediately try again after a while. 
 
